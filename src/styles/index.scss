@@ -1,0 +1,221 @@
+@import "./reset.css";
+@import "./vars.scss";
+@import url('https://fonts.googleapis.com/css2?family=Jura&family=Lato&display=swap');
+
+.index-body {
+   color: $white;
+   font-family: 'Jura', sans-serif;
+   font-family: 'Lato', sans-serif;
+   font-family: 'Jura', sans-serif;
+   font-family: 'Lato', sans-serif;
+}
+
+/*.header{
+   width: 100%;
+   height: 10vh;
+   background-color:$black ;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 0 4%;
+   &__logo{
+
+   }
+   &__logo-item{
+      background:url("../img/vesh-logo2.png") center ;
+      background-size: cover;
+      width: 50px;
+      height: 50px;
+   }
+   &__genders{
+      display: flex;
+      height: 100%;
+   }
+   &__gender{
+      padding: 10px 15px;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      &:hover{
+         background-color: $colSer;
+      }
+   }
+   &__gender-link{
+      color: $white;
+      font-size: 30px;
+   }
+   &__search{
+      height: 100%;
+      width: 30vw;
+      display: flex;
+      align-items: center;
+   }
+   &__search-form{
+      position: relative;
+      width: 100%;
+   }
+   &__search-input{
+      width: 100%;
+      position: relative;
+      padding:12px 10px;
+      border: none;
+      border: 3px $black solid;
+      border-radius: 25px;
+      margin: 0;
+      padding-right: 50px;
+      transition: all 0.5s ease ;
+      box-sizing: border-box;
+      &:focus{
+         outline: none;
+         border:3px blue solid;
+         background-color: #fff;
+      }
+   }
+   &__search-btn{
+      position: absolute;
+      right: 6px;
+      top: 5px;
+      height: 35px;
+      width: 35px;
+      border-radius: 50%;
+      border:transparent;
+      background-color: $black;
+      padding: 5px;
+      cursor: pointer;
+      transition: background-color 0.5s ease;
+      &.active{
+         background-color: green
+      }
+
+      &-item{
+         width: 100%;
+         height: 100%;
+         background: url("../img/search.svg") center center;
+         background-size: cover;
+      }
+      &.active{
+         background-color: blue;
+      }
+   }
+
+   &__persons{
+      margin-left: 50px;
+      display: flex;
+      align-items: center;
+
+   }
+   &__person:not(last-chald){
+      margin-left: 40px;
+   }
+   &_person-item{
+      width: 50px;
+      height: 50px;  
+   }
+
+   
+}*/
+
+
+.intro {
+   width: 100%;
+   height: calc(100vh - 4em);
+   background: url("/img/page-img/intro.webp") center center;
+   background-size: cover;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-bottom: 100px;
+   color: #000;
+
+   &__text {
+      display: flex;
+      flex-direction: column;
+   }
+
+   &__text-title {
+      width: 100%;
+      font-size: 6rem;
+      text-align: center;
+
+   }
+
+   &__text-p {
+      width: 100%;
+      font-size: 5rem;
+      text-align: center;
+      text-transform: uppercase;
+   }
+
+   &__text-span {
+      width: 100%;
+      font-size: 2.37em;
+      text-align: center;
+      text-transform: uppercase;
+      margin-bottom: 1em;
+   }
+
+   &__for {}
+
+   &__for-item {
+      padding: .66em .9em;
+      background-color: $white;
+      color: #000;
+      font-size: 1.8em;
+      transition: all 0.5s ease;
+      border: transparent;
+      margin-right: 20px;
+      cursor: pointer;
+
+      &:hover {
+         background-color: $black;
+         color: $white;
+      }
+
+      &:last-child {
+         margin-right: 0px;
+      }
+
+   }
+}
+
+@media screen and (max-width:767px) {
+   .intro {
+      margin-bottom: 0;
+   }
+}
+
+@media screen and (max-width:600px) {
+
+   // intro
+   .intro {
+      &__text-title {
+         font-size: 3.5em;
+      }
+
+      &__text-p {
+         font-size: 3em;
+      }
+
+      &__text-span {
+         font-size: 1.4em;
+      }
+
+      &__for {
+         display: flex;
+         flex-direction: column;
+
+      }
+
+      &__for-item {
+         padding: .99em .9em;
+         margin-right: 0;
+         margin-bottom: 1em;
+         display: flex;
+         justify-content: center;
+         font-size: 1.2em;
+      }
+
+   }
+
+}

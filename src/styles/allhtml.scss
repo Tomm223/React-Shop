@@ -1,0 +1,334 @@
+@import "./reset.css";
+@import "./vars.scss";
+
+
+
+.AlertDefault {
+   position: fixed;
+   top: .5rem;
+   left: 50%;
+   transform: translate(-50%, 0%);
+   z-index: 3;
+}
+
+.App {
+
+   &.defaulte {
+      background-color: #fff;
+   }
+
+   &.grey {
+      background-color: #eee;
+   }
+
+}
+
+//gender
+/*
+.header{
+   width: 100%;
+   height: 10vh;
+   background-color:$black ;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 0 4%;
+   &__logo{
+
+   }
+   &__logo-item{
+      background:url("../img/vesh-logo2.png") center ;
+      background-size: cover;
+      width: 50px;
+      height: 50px;
+   }
+   &__genders{
+      display: flex;
+      height: 100%;
+   }
+   &__gender{
+      padding: 10px 15px;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      &:hover{
+         background-color: $colSer;
+      }
+   }
+   &__gender-link{
+      color: $white;
+      font-size: 30px;
+   }
+   &__search{
+      height: 100%;
+      width: 30vw;
+      display: flex;
+      align-items: center;
+   }
+   &__search-form{
+      position: relative;
+      width: 100%;
+   }
+   &__search-input{
+      width: 100%;
+      position: relative;
+      padding:12px 10px;
+      border: none;
+      border: 3px $black solid;
+      border-radius: 25px;
+      margin: 0;
+      padding-right: 50px;
+      transition: all 0.5s ease ;
+      box-sizing: border-box;
+      &:focus{
+         outline: none;
+         border:3px blue solid;
+         background-color: #fff;
+      }
+   }
+   &__search-btn{
+      position: absolute;
+      right: 6px;
+      top: 5px;
+      height: 35px;
+      width: 35px;
+      border-radius: 50%;
+      border:transparent;
+      background-color: $black;
+      padding: 5px;
+      cursor: pointer;
+      transition: background-color 0.5s ease;
+      &.active{
+         background-color: green
+      }
+
+      &-item{
+         width: 100%;
+         height: 100%;
+         background: url("../img/search.svg") center center;
+         background-size: cover;
+      }
+      &.active{
+         background-color: blue;
+      }
+   }
+
+   &__persons{
+      margin-left: 50px;
+      display: flex;
+      align-items: center;
+
+   }
+   &__person:not(last-chald){
+      margin-left: 40px;
+   }
+   &_person-item{
+      width: 50px;
+      height: 50px;  
+   }
+
+   
+}*/
+
+
+.feture {
+   width: 100%;
+   margin-bottom: 100px;
+   margin-top: 50px;
+
+   &__title {
+      text-align: center;
+      margin-bottom: 70px;
+
+      h2 {
+         font-size: 50px;
+         color: $black;
+         margin-bottom: 10px;
+      }
+
+      span {
+         color: $colSer;
+         opacity: 0.8;
+      }
+   }
+
+   .container {
+      @include container ($container)
+   }
+}
+
+.product {
+   .container {
+      @include container (1366px);
+      padding: 0 2rem;
+   }
+
+   &__block {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      grid-gap: 10px;
+      position: relative;
+   }
+
+   &__item {
+      cursor: pointer;
+      width: 100%;
+
+      //width= +-318px
+      &:hover {
+         box-shadow: $box-shw;
+      }
+   }
+
+   &__item-img {
+      width: 100%;
+
+      img {
+         width: 100%;
+         height: auto;
+      }
+
+
+   }
+
+   &__item-supp {
+      display: flex;
+      flex-direction: column;
+      background-color: #F8F3F4;
+      padding: 15px;
+      color: $black;
+   }
+
+   &__item-title {
+      font-weight: 400;
+      font-size: 1.5rem;
+      margin-bottom: 1em;
+   }
+
+   &__item-text {
+      color: #5D5D5D;
+      font-size: 1.2rem;
+      line-height: 1em;
+
+      p {
+         margin-bottom: .7em;
+      }
+   }
+
+   &__item-price {
+      color: red;
+   }
+}
+
+//BTN OF PRODUCTS CATALOG
+.product-btn {
+   width: 100%;
+   padding: 50px 0px;
+   display: flex;
+   justify-content: center;
+
+   &__item {
+      padding: 20px 30px;
+      background-color: $black;
+      color: $white;
+      font-size: 25px;
+      transition: all 0.5s ease;
+      border: transparent;
+      margin-right: 20px;
+      cursor: pointer;
+
+      &:hover {
+         background-color: #318CE7;
+         color: $white;
+      }
+
+      &:last-child {
+         margin-right: 0px;
+      }
+
+      &:active {
+         transform: scale(0.8);
+      }
+
+
+
+   }
+}
+
+@media screen and (max-width:1023px) {
+   .product {
+      &__block {
+         grid-template-columns: repeat(3, 1fr);
+      }
+   }
+}
+
+@media screen and (max-width:900px) {
+
+   //products
+   .product {
+      &__block {
+         grid-template-columns: repeat(3, 1fr);
+      }
+
+      &__item-text {
+         font-size: 1.5rem;
+      }
+   }
+}
+
+@media screen and (max-width:767px) {
+
+   //title
+   .feture {
+      margin-bottom: 100px;
+      margin-top: 50px;
+
+      &__title {
+         margin-bottom: 70px;
+
+         h2 {
+            font-size: 3em;
+            margin-bottom: .5rem;
+         }
+
+         span {
+            color: $colSer;
+            opacity: 0.8;
+            font-size: 1.3em;
+         }
+      }
+   }
+
+   //products
+   .product {
+      &__block {
+         grid-template-columns: repeat(2, 1fr);
+      }
+
+      &__item-title {
+         font-size: 2em;
+      }
+   }
+}
+
+@media screen and (max-width:600px) {
+
+   //title
+   .feture {
+
+      &__title {
+
+         h2 {
+            font-size: 2.5em;
+         }
+      }
+   }
+
+   .product__item-title {
+      font-size: 1.5em;
+   }
+}
